@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-spring-deployment
+  namespace: gitops-sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-spring
+  template:
+    metadata:
+      labels:
+        app: java-spring
+    spec:
+      containers:
+      - name: java-spring
+        image: openjdk:11-jre-slim
+        command: ["java", "-jar", "app.jar"]
+        resources:
+          limits:
+            cpu: 500m
+            memory: 128Mi
+          requests:
+            cpu: 250m
+            memory: 64Mi
