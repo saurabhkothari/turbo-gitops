@@ -12,7 +12,7 @@ spec:
     metadata:
       labels:
         app: nodejs
-   spec:
+    spec:
       containers:
       - name: redis
         image: redis:alpine
