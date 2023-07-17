@@ -14,9 +14,8 @@ spec:
         app: go
     spec:
       containers:
-      - name: go
-        image: golang:alpine
-        command: ["go", "run", "main.go"]
+      - name: redis
+        image: redis:alpine
         resources:
           limits:
             cpu: 500m
