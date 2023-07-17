@@ -14,9 +14,8 @@ spec:
         app: java-spring
     spec:
       containers:
-      - name: java-spring
-        image: openjdk:11-jre-slim
-        command: ["java", "-jar", "app.jar"]
+      - name: redis
+        image: redis:alpine
         resources:
           limits:
             cpu: 500m
