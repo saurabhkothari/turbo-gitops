@@ -12,11 +12,10 @@ spec:
     metadata:
       labels:
         app: nodejs
-    spec:
+   spec:
       containers:
-      - name: nodejs
-        image: node:alpine
-        command: ["node", "app.js"]
+      - name: redis
+        image: redis:alpine
         resources:
           limits:
             cpu: 500m
