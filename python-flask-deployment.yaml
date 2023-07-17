@@ -14,9 +14,8 @@ spec:
         app: python-flask
     spec:
       containers:
-      - name: python-flask
-        image: python:alpine
-        command: ["python", "app.py"]
+      - name: redis
+        image: redis:alpine
         resources:
           limits:
             cpu: 500m
