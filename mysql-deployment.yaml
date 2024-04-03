@@ -14,12 +14,12 @@ spec:
         app: mysql
     spec:
       containers:
-      - name: redis
-        image: redis:alpine
+      - image: redis:alpine
+        name: redis
         resources:
           limits:
             cpu: 500m
             memory: 128Mi
           requests:
-            cpu: 250m
+            cpu: 100m
             memory: 64Mi
